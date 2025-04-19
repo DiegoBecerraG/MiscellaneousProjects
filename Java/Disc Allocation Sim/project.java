@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class project_3 {
+public class project {
     public static void main(String[] args) {
         //User Interface
         String fileName;
