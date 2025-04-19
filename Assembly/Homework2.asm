@@ -1,8 +1,3 @@
-# Name: Diego Becerra-Grimaldo
-# Assignment: Homework 2
-# Date: 20 February 2022
-
-
 .data
 input:	.space	20
 text: 	.asciiz "Enter some text: "
