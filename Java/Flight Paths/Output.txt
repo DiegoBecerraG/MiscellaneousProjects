@@ -1,0 +1,2 @@
+Flight 1: Dallas, Houston (Time)Path 1: Dallas -> Austin -> Houston Time: 51
+Flight 2: Chicago, Dallas (Cost)Path 1: Chicago -> Chicago -> Chicago -> Chicago Cost: 0
