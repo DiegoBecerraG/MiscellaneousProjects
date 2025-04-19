@@ -1,5 +1,3 @@
-// AVL Binary search tree implementation in Java
-// Author: AlgorithmTutor
 import java.io.*;
 // data structure that represents a node in the tree
 class AVLNode {
@@ -90,9 +88,6 @@ public class AVLTree {
             }
 
         }
-
-        // Write the update balance logic here
-        // YOUR CODE HERE
 
         return node;
     }
