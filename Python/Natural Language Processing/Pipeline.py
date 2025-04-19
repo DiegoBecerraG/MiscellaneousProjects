@@ -1,9 +1,26 @@
 from transformers import pipeline
+
+model_name = "cardiffnlp/twitter-xlm-roberta-base-sentiment"
+model = pipeline("sentiment-analysis", model=model_name)
+
+pred = model("despite all similarity , the love and hate seem like polar opposites .")[0]
+print(pred)
+
+######################################################################
+
+model_name = "mrm8488/t5-base-finetuned-emotion"
+model = pipeline("text2text-generation", model=model_name)
+
+pred = model("@user only you can stop politics-as-usual. #DrainTheSwamp #MAGA")[0]
+print(pred)
+
+######################################################################
+
 model = pipeline(model = "deepset/roberta-base-squad2-distilled")
 
 model(question="Which border does the Rhine flow from the south?", context="Lake Constance consists of three bodies of water: the Obersee (\"upper lake\"), the Untersee (\"lower lake\"), and a connecting stretch of the Rhine, called the Seerhein (\"Lake Rhine\"). The lake is situated in Germany, Switzerland and Austria near the Alps. Specifically, its shorelines lie in the German states of Bavaria and Baden-Württemberg, the Austrian state of Vorarlberg, and the Swiss cantons of Thurgau and St. Gallen. The Rhine flows into it from the south following the Swiss-Austrian border. It is located at approximately 47°39′N 9°19′E / 47.650°N 9.317°E / 47.650; 9.317.")
 
-#######
+######################################################################
 
 model = pipeline(model = "sysresearch101/t5-large-finetuned-xsum-cnn")
 
