@@ -1,7 +1,3 @@
-# Name: Diego Becerra-Grimaldo
-# Assignment: Homework 3
-# Date: 6 March 2022
-
 .data
 
 height:	.word	0
