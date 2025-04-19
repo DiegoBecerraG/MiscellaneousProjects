@@ -1,7 +1,3 @@
-# Name: Diego Becerra
-# Title: Homework 4
-# Date: 27 March 2022
-
 # width of screen in pixels
 # 256 / 4 = 64
 .eqv 	WIDTH 64
