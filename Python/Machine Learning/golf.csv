@@ -1,0 +1,15 @@
+Day,Outlook,Temperature,Humidity,Wind,Play Golf,,,,,,,
+D1,Sunny,Hot,High,Weak,No,,,,,,,
+D2,Sunny,Hot,High,Strong,No,,,,,,,
+D3,Overcast,Hot,High,Weak,Yes,"Outlook (Hot, Mild, Cool)",,,,,,
+D4,Rain,Mild,High,Weak,Yes,"S_Hot  -> [2+, 2-]",,Entropy(S_Hot) = 1,,,,
+D5,Rain,Cool,Normal,Weak,Yes,"S_Mild -> [4+, 2-]",,Entropy(S_Mild) = -4/6log4/6 - 2/6log2/6,,,,0.276434591
+D6,Rain,Cool,Normal,Strong,No,"S_Cool -> [3+, 1-]",,Entopy(S_Cool) = -3/4log3/4 - 1/4log1/4,,,,0.24421905
+D7,Overcast,Cool,Normal,Strong,Yes,,,,,,,
+D8,Sunny,Mild,High,Weak,No,"Gain(S, Temperature)",,,,,,
+D9,Sunny,Cool,Normal,Weak,Yes,,,,,,,
+D10,Rain,Mild,Normal,Weak,Yes,,,,,,,
+D11,Sunny,Mild,Normal,Strong,Yes,,,,,,,
+D12,Overcast,Mild,High,Strong,Yes,,,,,,,
+D13,Overcast,Hot,Normal,Weak,Yes,,,,,,,
+D14,Rain,Mild,High,Strong,No,,,,,,,
