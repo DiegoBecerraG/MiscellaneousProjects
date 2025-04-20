@@ -1,0 +1,50 @@
+SELECT S.Name
+FROM STUDENT AS S, COURSE AS C, ENROLL AS E
+WHERE S.Ssn = E.Snn AND E.Course# = C.Course# AND Dept = ‘CS’;
+
+----------
+
+SELECT Course#, Cname
+FROM COURSE, ENROLL
+WHERE COURSE.Course# = ENROLL.Course#
+HAVING COUNT(ENROLL.Ssn) > 100;
+
+----------
+
+(SELECT S.Name
+FROM STUDENT AS S, COURSE AS C, ENROLL AS E
+WHERE S.Ssn = E.Snn AND E.Course# = C.Course#)
+MINUS
+(SELECT S.Name
+FROM STUDENT AS S, COURSE AS C, ENROLL AS E
+WHERE S.Ssn = E.Snn AND E.Course# = C.Course# AND Dept = ‘CS’);
+
+----------
+
+DELETE FROM TEXTBOOK
+WHERE NOT EXISTS 
+  (SELECT Book_isbn
+  FROM BOOK_ADOPTION);
+
+----------
+
+UPDATE TEXTBOOK
+SET Price = Price - 10
+WHERE NOT EXISTS
+	(SELECT Book_isbn
+  FROM BOOK_ADOPTION);
+
+----------
+
+CREATE ASSERTION Course_Max
+CHECK(NOT EXISTS(SELECT *
+			           FROM ENROLL
+			           GROUP BY Snn
+			           HAVING COUNT(*) >= 5));
+
+----------
+
+CREATE VIEW Course1
+AS SELECT Course#, Cname, Count(DISTINCT ENROLL.Snn), Count(DISTINCT BOOK_ADOPTION.Book_isbn)
+FROM COURSE, ENROLL, BOOK_ADOPTION
+WHERE COURSE.Course# = ENROLL.Course# & ENROLL.Course# = BOOK_ADOPTION.Course#;
